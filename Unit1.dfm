@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   BorderStyle = bsSizeToolWin
-  Caption = #1055#1086#1076#1089#1095#1077#1090' '#1089#1080#1084#1074#1086#1083#1086#1074' '#1090#1077#1082#1089#1090#1072
+  Caption = 'Search-text---app'
   ClientHeight = 250
   ClientWidth = 400
   Color = clBtnFace
