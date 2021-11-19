@@ -1,49 +1,69 @@
-# gitignore template for Drupal 8 projects
+# Раскомментировка этих типов, если вам нужен еще более чистый репозиторий. Но будьте осторожны.
+# Это может нанести вред существующему источнику проекта. Читайте пояснения ниже.
 #
-# earlier versions of Drupal are tracked in `community/PHP/`
+# Файлы ресурсов представляют собой двоичные файлы, содержащие манифест, значок проекта и сведения о версии.
+# Их нельзя рассматривать как текст или сравнивать с помощью diff-tools. Рассмотрите возможность замены их ФАЙЛАМИ .rc.
+#*.res
+#
+# Введите файл библиотеки (двоичный). В старых версиях Delphi он должен быть сохранен.
+# Начиная с Delphi 2009 он производится из файла .ridl и может быть проигнорирован.
+#*.tlb
+#
+# Файл портфолио диаграммы. Используется редактором диаграмм вплоть до Delphi 7.
+# Раскомментируете это, если вы не используете диаграммы или используете более новую версию Delphi.
+#*.ddp
+#
+# Визуальный файл LiveBindings. Добавлено в Delphi XE2.
+# Раскомментировка, если вы не используете LiveBindings Designer.
+#*.vlb
+#
+# Файл конфигурации диспетчера развертывания для проекта. Добавлено в Delphi XE2.
+# Раскомментируете это, если это не мобильная разработка и вы не используете функцию удаленной отладки.
+#*.deployproj
+#
+# Объектные файлы C++, создаваемые при настройке создания выходных файлов C/C++.
+# Раскомментикуйте это, если вы не используете внешние объекты (например, библиотеку zlib).
+#*.obj
+#
 
-# Ignore configuration files that may contain sensitive information
-/sites/*/*settings*.php
-/sites/*/*services*.yml
+# Двоичные файлы, созданные компилятором Delphi (безопасно удалять)
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.dcp
+*(с)
+*.apk
+*.drc
+*.карта
+*.dres
+*.rsm
+*.tds
+*.dcu
+*.lib
+*.a
+*.o
+*.ocx
 
-# Ignore paths that may contain user-generated content
-/sites/*/files
-/sites/*/public
-/sites/*/private
-/sites/*/files-public
-/sites/*/files-private
+# Автоматически сгенерированные файлы Delphi (дублированная информация)
+*.cfg
+*.hpp
+*Ресурс.rc
 
-# Ignore paths that may contain temporary files
-/sites/*/translations
-/sites/*/tmp
-/sites/*/cache
+# Локальные файлы Delphi (сведения о пользователе)
+*.локальный
+*.identcache
+*.projdata
+*.tvsconfig
+*.dsk
 
-# Ignore testing related files
-/sites/simpletest
+# История Delphi и резервное копирование
+__history/
+__recovery/
+*.~*
 
-# Ignore drupal core (if not versioning drupal sources)
-/core
-/modules/README.txt
-/profiles/README.txt
-/sites/README.txt
-/sites/example.sites.php
-/sites/example.settings.local.php
-/sites/development.services.yml
-/themes/README.txt
-/vendor
-/.csslintrc
-/.editorconfig
-/.eslintignore
-/.eslintrc.json
-/.gitattributes
-/.htaccess
-/autoload.php
-/composer.json
-/composer.lock
-/example.gitignore
-/index.php
-/LICENSE.txt
-/README.txt
-/robots.txt
-/update.php
-/web.config
+# Статистический файл Castalia (так как XE7 Castalia распространяется с Delphi)
+*.stat
+
+# https://github.com/HashLoad/boss поставщика диспетчера зависимостей Boss
+модули/
